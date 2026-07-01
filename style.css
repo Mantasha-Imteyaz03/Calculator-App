@@ -21,6 +21,7 @@ body{
 }
 
 #main h2{
+  border: 2px solid #271e1e;
   color: skyblue;
   margin: 10px 45px;
   font-family:'Times New Roman', Times, serif;
@@ -28,7 +29,7 @@ body{
   font-size: 35px;
   text-transform: uppercase;
   text-shadow: 1px 1px 5px #fff;
-  text-decoration: 3px dotted underline skyblue;
+ 
 }
 .calculator{
  margin-top: 7px;
@@ -36,32 +37,39 @@ body{
 .calculator input{
   text-align: end;
   width: 100%;
-  padding: 14px;
+  padding: 18px;
   border: none;
   outline: none;
   border-radius: 4px;
-  /* background: transparent; */
+  color: #fff;
+  background-color: rgb(70, 69, 69);
+  font-size: xx-large;
+  margin-top: 10px;
 }
 .calculator input:focus{
   border: 3px solid skyblue;
   box-shadow: 0 0 25px rgba(135, 206, 235, 3);
 }
-/* .calculator button{
-  width: 65px;
-  height: 30px;
-  cursor: pointer;
-  border: 2px solid white;
-  outline: none;
-  border-radius: 4px;
-  font-size: 19px;
-  font-family: "Dancing Script", cursive;
-  background: transparent;
-  color: skyblue;
-} */
+
 
 .btns{
-  display: flex;
-  align-items: center;
-  justify-content: space-evenly;
-  margin-top: 20px;
+  display: grid;
+  grid-template-columns: repeat(4,1fr);
+  gap: 30px;
+  margin: 20px;
+}
+.btns button{
+  height: 50px;
+  cursor: pointer;
+  border-radius: 20px;
+  outline: none;
+  border: none;
+  font-size: 25px;
+  color: #fff;
+  background-color: rgb(70, 69, 69);
+  box-shadow: 0 0 15px rgb(255, 255, 255);
+
+}
+.zero{
+  grid-column: span 2;
 }
